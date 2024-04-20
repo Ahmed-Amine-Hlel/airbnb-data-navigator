@@ -13,7 +13,9 @@ const Sidebar: React.FC = () => {
   return (
     <div className="relative flex flex-col h-full w-[18rem] bg-gray-800 text-gray-100 transition-width duration-300 ease-in-out dark:bg-gray-900">
       <div className="p-5 flex justify-center items-center">
-        <div className="text-xl font-bold">Airbnb BI Dashboard</div>
+        <Link href="/" className="text-xl font-bold">
+          Airbnb BI Dashboard
+        </Link>
       </div>
       <ul className="flex-grow space-y-4 mt-10">
         <li>
