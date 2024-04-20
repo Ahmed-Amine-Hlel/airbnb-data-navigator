@@ -1,10 +1,10 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import { parseCSV } from '@/utils/parseCSV';
-import BarChart from '../components/charts/BarChart';
-import PieChart from '../components/charts/PieChart';
-import LineChart from '../components/charts/LineChart';
-import Histogram from '../components/charts/Histogram';
+import BarChart from '@/components/charts/BarChart';
+import PieChart from '@/components/charts/PieChart';
+import LineChart from '@/components/charts/LineChart';
+import Histogram from '@/components/charts/Histogram';
 
 export interface Listing {
   id: number;
@@ -129,7 +129,7 @@ const Overview = () => {
     }
   };
 
-  const cardStyles = 'p-6 shadow-lg rounded-lg bg-white text-center';
+  const cardStyles = 'px-6 py-8 shadow-lg rounded-lg bg-white text-center';
   const buttonStyles =
     'btn btn-large btn-neutral mt-4 py-2 px-6 rounded text-white font-semibold';
 
@@ -137,18 +137,46 @@ const Overview = () => {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-12">
         <h1 className="text-3xl font-semibold leading-tight text-gray-900">
-          Real Estate Market Overview
+          Airbnb Price Optimization Case Study
         </h1>
         <p className="mt-3 text-lg text-gray-600">
-          Snapshot of key real estate metrics and trends
+          This section provides an in-depth analysis of the Airbnb market in
+          NYC, focusing on optimizing pricing strategies through Business
+          Intelligence tools to enhance profitability and market
+          competitiveness.
         </p>
       </div>
+
+      {/* Business Context and Model of Need */}
+      <div className="mb-8">
+        <h2 className="text-2xl font-bold text-gray-900">
+          Business Need and Objectives
+        </h2>
+        <ul className="list-disc list-inside text-gray-600 mt-2">
+          <li>
+            Develop optimal pricing strategies to maximize profitability and
+            ensure high occupancy rates throughout varying seasons.
+          </li>
+          <li>
+            Perform comprehensive market analysis to understand and outperform
+            competitors.
+          </li>
+          <li>
+            Deploy targeted KPIs to steer operational and strategic decisions
+            effectively.
+          </li>
+        </ul>
+      </div>
+
+      <div className="border-b border-[0.05rem] border-[#140D20] w-full my-8 rounded" />
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className={cardStyles}>
           <h3 className="text-xl font-semibold">Neighbourhood Distribution</h3>
           <p className="text-gray-600">
-            Explore property distribution across different neighbourhoods.
+            Analyze property distribution across NYC&apos;s neighborhoods to
+            identify market saturation levels and untapped opportunities for
+            growth, providing a strategic advantage in pricing and marketing.
           </p>
           <button
             className={buttonStyles}
@@ -160,7 +188,8 @@ const Overview = () => {
             <div className="modal-box">
               <BarChart data={barChartData} />
               <p className="py-4">
-                Distribution of properties across neighbourhoods.
+                Visual representation of properties across neighbourhoods,
+                aiding strategic positioning and market entry decisions.
               </p>
               <form method="dialog">
                 <button className="btn">Close</button>
@@ -169,10 +198,13 @@ const Overview = () => {
           </dialog>
         </div>
 
+        {/* Insightful analysis of room types to guide marketing and operational strategies */}
         <div className={cardStyles}>
           <h3 className="text-xl font-semibold">Room Type Analysis</h3>
           <p className="text-gray-600">
-            Examine the prevalence of various room types across listings.
+            This analysis provides insight into the distribution of various room
+            types within the listings, which is crucial for developing targeted
+            marketing strategies and optimizing service offerings.
           </p>
           <button
             className={buttonStyles}
@@ -183,7 +215,11 @@ const Overview = () => {
           <dialog id="pieChartModal" className="modal">
             <div className="modal-box">
               <PieChart data={pieChartData} />
-              <p className="py-4">Average price by room type showing.</p>
+              <p className="py-4">
+                The pie chart demonstrates the market share of each room type,
+                offering a visual understanding of consumer preferences and
+                potential revenue streams.
+              </p>
               <form method="dialog">
                 <button className="btn">Close</button>
               </form>
@@ -191,10 +227,13 @@ const Overview = () => {
           </dialog>
         </div>
 
+        {/* Tracking and predicting listing availability to optimize pricing dynamically */}
         <div className={cardStyles}>
           <h3 className="text-xl font-semibold">Availability Trends</h3>
           <p className="text-gray-600">
-            Track changes in listing availability over time.
+            Monitoring the fluctuations in listing availability provides
+            predictive insights into peak demand periods, enabling proactive
+            pricing strategies to maximize revenue during high-demand times.
           </p>
           <button
             className={buttonStyles}
@@ -205,7 +244,11 @@ const Overview = () => {
           <dialog id="lineChartModal" className="modal">
             <div className="modal-box">
               <LineChart data={lineChartData} />
-              <p className="py-4">Listing trends over time indicating.</p>
+              <p className="py-4">
+                This chart tracks the changes in availability over time,
+                highlighting trends that can inform strategic pricing
+                adjustments.
+              </p>
               <form method="dialog">
                 <button className="btn">Close</button>
               </form>
@@ -213,10 +256,13 @@ const Overview = () => {
           </dialog>
         </div>
 
+        {/* Deep dive into pricing strategies to identify and adapt to market demand shifts */}
         <div className={cardStyles}>
           <h3 className="text-xl font-semibold">Price Distribution</h3>
           <p className="text-gray-600">
-            Analyze pricing patterns to identify potential market strategies.
+            Detailed analysis of pricing patterns across different listings to
+            identify standard rates and deviations, enabling tailored pricing
+            strategies that respond dynamically to shifts in market demand.
           </p>
           <button
             className={buttonStyles}
@@ -228,7 +274,9 @@ const Overview = () => {
             <div className="modal-box">
               <Histogram data={histogramData} />
               <p className="py-4">
-                Review distribution across listings revealing.
+                Histogram displaying the range of prices across listings,
+                revealing the most common pricing points and opportunities for
+                strategic adjustments.
               </p>
               <form method="dialog">
                 <button className="btn">Close</button>

@@ -5,13 +5,12 @@ import {
   MdOutlineDataUsage,
   MdAnalytics,
   MdReport,
-  MdSettings,
   MdShowChart,
 } from 'react-icons/md';
 
 const Sidebar: React.FC = () => {
   return (
-    <div className="relative flex flex-col h-full w-[18rem] bg-gray-800 text-gray-100 transition-width duration-300 ease-in-out dark:bg-gray-900">
+    <div className="relative flex flex-col h-full w-[19rem] bg-gray-800 text-gray-100 transition-width duration-300 ease-in-out dark:bg-gray-900">
       <div className="p-5 flex justify-center items-center">
         <Link href="/" className="text-xl font-bold">
           Airbnb BI Dashboard
@@ -24,21 +23,21 @@ const Sidebar: React.FC = () => {
             className="px-4 py-2 flex items-center gap-3 hover:bg-gray-700 rounded-md transition-colors duration-200 ease-in-out cursor-pointer"
           >
             <MdOutlineDashboard className="text-xl" />
-            <span>Overview</span>
+            <span>Overview & Need Model</span>
           </Link>
         </li>
         <li>
           <Link
-            href="/data-management"
+            href="/dashboard/data-management"
             className="px-4 py-2 flex items-center gap-3 hover:bg-gray-700 rounded-md transition-colors duration-200 ease-in-out cursor-pointer"
           >
             <MdOutlineDataUsage className="text-xl" />
-            <span>Data Management</span>
+            <span>Data Management & BI Process</span>
           </Link>
         </li>
         <li>
           <Link
-            href="/analysis-tools"
+            href="/dashboard/analysis-tools"
             className="px-4 py-2 flex items-center gap-3 hover:bg-gray-700 rounded-md transition-colors duration-200 ease-in-out cursor-pointer"
           >
             <MdAnalytics className="text-xl" />
@@ -47,7 +46,7 @@ const Sidebar: React.FC = () => {
         </li>
         <li>
           <Link
-            href="/kpi"
+            href="/dashboard/kpi"
             className="px-4 py-2 flex items-center gap-3 hover:bg-gray-700 rounded-md transition-colors duration-200 ease-in-out cursor-pointer"
           >
             <MdShowChart className="text-xl" />
@@ -56,20 +55,11 @@ const Sidebar: React.FC = () => {
         </li>
         <li>
           <Link
-            href="/reports"
+            href="/dashboard/reports"
             className="px-4 py-2 flex items-center gap-3 hover:bg-gray-700 rounded-md transition-colors duration-200 ease-in-out cursor-pointer"
           >
             <MdReport className="text-xl" />
             <span>Reports & Visualization</span>
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/settings"
-            className="px-4 py-2 flex items-center gap-3 hover:bg-gray-700 rounded-md transition-colors duration-200 ease-in-out cursor-pointer"
-          >
-            <MdSettings className="text-xl" />
-            <span>Settings & Administration</span>
           </Link>
         </li>
       </ul>
