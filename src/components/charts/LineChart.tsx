@@ -44,7 +44,7 @@ const LineChart: React.FC<LineChartProps> = ({ data }) => {
       },
       title: {
         display: true,
-        text: 'Chart Title',
+        text: 'Availability Trends Over Time',
       },
     },
   };

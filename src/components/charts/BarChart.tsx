@@ -43,7 +43,7 @@ const BarChart: React.FC<ChartProps> = ({ data }) => {
       },
       title: {
         display: true,
-        text: 'Chart Title',
+        text: 'Neighbourhood Distribution',
       },
     },
   };

@@ -34,7 +34,7 @@ const Histogram: React.FC<HistogramProps> = ({ data }) => {
       },
       title: {
         display: true,
-        text: 'Chart Title',
+        text: 'Price Distribution Across Listings',
       },
     },
   };
