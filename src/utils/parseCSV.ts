@@ -1,4 +1,4 @@
-import { Listing } from '@/app/dashboard/page';
+import { Listing } from '@/app/types';
 import Papa from 'papaparse';
 
 export const parseCSV = (fileContent: string): Promise<Listing[]> => {
