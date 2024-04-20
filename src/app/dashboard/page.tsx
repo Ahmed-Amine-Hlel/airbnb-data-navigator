@@ -1,43 +1,15 @@
 'use client';
-import React, { useEffect, useState } from 'react';
-import { parseCSV } from '@/utils/parseCSV';
+import React from 'react';
 import BarChart from '@/components/charts/BarChart';
 import PieChart from '@/components/charts/PieChart';
 import LineChart from '@/components/charts/LineChart';
 import Histogram from '@/components/charts/Histogram';
-
-export interface Listing {
-  id: number;
-  name: string;
-  host_id: number;
-  neighbourhood_group: string;
-  room_type: string;
-  price: number;
-  minimum_nights: number;
-  number_of_reviews: number;
-  last_review: string;
-  reviews_per_month: number;
-  calculated_host_listings_count: number;
-  availability_365: number;
-}
+import { useData } from '../../hooks/useData';
 
 const Overview = () => {
-  const [listings, setListings] = useState<Listing[]>([]);
+  const { listings } = useData();
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch('/AB_NYC_2019.csv');
-        const csvText = await response.text();
-        const listingsData: Listing[] = await parseCSV(csvText);
-        setListings(listingsData.slice(0, 1000));
-      } catch (error) {
-        console.error('Failed to load or parse CSV', error);
-      }
-    };
-
-    fetchData();
-  }, []);
+  // console.log(listings);
 
   // Data processing for BarChart
   const neighbourhoodGroups = listings.reduce(

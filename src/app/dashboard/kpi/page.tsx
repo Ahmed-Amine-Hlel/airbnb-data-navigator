@@ -9,58 +9,56 @@ const KpisPage = () => {
         </h1>
         <p className="mt-3 text-lg text-gray-600">
           Effective use of KPIs is critical in measuring the success of pricing
-          strategies and overall business performance. This page outlines the
-          specific KPIs I utilize to track and analyze the effectiveness of my
-          price optimization strategies in the Airbnb market.
+          strategies and overall business performance in the Airbnb market.
+          These metrics provide insights that guide strategic decision-making.
         </p>
       </div>
 
+      {/* ADR Section */}
       <div className="mb-8">
         <h2 className="text-2xl font-bold text-gray-900">
           Average Daily Rate (ADR)
         </h2>
         <p className="text-lg text-gray-600 mt-2">
-          ADR represents the average rental income per paid occupied room in a
-          given time period. It is calculated by dividing the total earned
-          rental income by the number of rooms sold. This indicator helps assess
-          the pricing efficiency and is pivotal for adjusting pricing strategies
-          to maximize revenue.
+          ADR measures the average revenue earned from rented rooms per day.
+          Monitoring ADR helps in understanding the pricing effectiveness and
+          adjusting rates to maximize revenue while remaining competitive in the
+          market.
         </p>
       </div>
 
+      {/* Occupancy Rate Section */}
       <div className="mb-8">
         <h2 className="text-2xl font-bold text-gray-900">Occupancy Rate</h2>
         <p className="text-lg text-gray-600 mt-2">
-          The Occupancy Rate measures the ratio of rented or used rooms compared
-          to the total available. It is a critical metric for understanding
-          demand and seasonal trends, which assists in forecasting and dynamic
-          pricing adjustments.
+          The Occupancy Rate reflects the percentage of all available rooms that
+          are occupied at any given time. It is pivotal for identifying demand
+          patterns and optimizing pricing models to improve room occupancy.
         </p>
       </div>
 
+      {/* RevPAR Section */}
       <div className="mb-8">
         <h2 className="text-2xl font-bold text-gray-900">
           Revenue Per Available Room (RevPAR)
         </h2>
         <p className="text-lg text-gray-600 mt-2">
-          RevPAR combines aspects of ADR and occupancy rates to provide a
-          comprehensive view of both pricing and room usage effectiveness. It is
-          calculated by multiplying ADR by the occupancy rate, offering insights
-          into overall financial performance relative to the total available
-          room inventory.
+          RevPAR integrates ADR and Occupancy Rate to assess the overall
+          financial performance of the property. It indicates how well the
+          property utilizes its available rooms to generate revenue.
         </p>
       </div>
 
+      {/* Seasonal Demand Trends Section */}
       <div className="mb-8">
         <h2 className="text-2xl font-bold text-gray-900">
           Seasonal Demand Trends
         </h2>
         <p className="text-lg text-gray-600 mt-2">
-          This KPI tracks booking frequencies during different seasons,
-          providing data to optimize pricing strategies according to seasonal
-          variations in demand. Understanding these trends is essential for
-          setting prices that attract guests while maximizing profitability
-          during peak and off-peak seasons.
+          This metric analyzes booking rates across different seasons to inform
+          dynamic pricing adjustments. Understanding these trends helps in
+          setting prices that capitalize on peak demand periods while attracting
+          bookings during slower seasons.
         </p>
       </div>
     </div>

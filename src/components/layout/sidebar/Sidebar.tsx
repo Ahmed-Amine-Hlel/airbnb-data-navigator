@@ -59,7 +59,7 @@ const Sidebar: React.FC = () => {
             className="px-4 py-2 flex items-center gap-3 hover:bg-gray-700 rounded-md transition-colors duration-200 ease-in-out cursor-pointer"
           >
             <MdReport className="text-xl" />
-            <span>Reports & Visualization</span>
+            <span>Reports</span>
           </Link>
         </li>
       </ul>
